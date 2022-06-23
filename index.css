@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Plus&family=Lato:ital,wght@0,400;1,300&family=Raleway&family=Roboto&display=swap');
+
+:root {
+    --text: #13293D;
+    --primary: #1B98E0;
+    --secondary: #006494;
+}
+
+body { 
+    font-family: "Roboto";
+    text-align: center;
+    color: var(--text);
+    font-size: 14px;
+    margin: 1.5rem;
+}
+
+#app {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.preview-iframe {
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid black;
+}
+
+.left-container {
+    /* min-width: 350px; */
+    width: 100%;
+    max-width: 500px;
+    padding: 1rem;
+    /* margin: 0 auto; */
+    border: 1px rgba(0,0,0,0.28);
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 2px 15px 5px rgba(0,0,0,0.28); 
+    box-shadow: 2px 2px 15px 5px rgba(0,0,0,0.28);
+}
+
+header {
+    padding: 0 2rem;
+}
+
+hr {
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+.ts {
+    text-align: left;
+    border: none;
+}
+
+.ts  tr  td {
+    padding: 10px;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    line-height: .5rem;
+}
+
+.row {
+    display: flex;
+    margin: 10px;
+    gap: 10px;
+    text-align: left;
+}
+
+@media only screen and (max-width: 1000px) {
+    #app {
+        flex-direction: column;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
+.font-select {
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+    padding: 5px;
+}
+p.label {
+    padding: 5px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+    text-transform: uppercase;
+    transform: scale(1);
+    background-color: white;
+    transition: all 150ms ease;
+    margin: 1px;
+    color: black;
+    text-decoration: none;
+}
+
+.btn:hover {
+    color: white;
+    transform: scale(1.05);
+    background-color: var(--secondary);
+}
+
+.btn.active {
+    /* transform: scale(1.05); */
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn:active {
+    background-color: var(--secondary);
+    border: white 2px solid;
+}
+
+.text-input {
+    border: none;
+    transition: all 150ms ease-in-out;
+    border-radius: 0px;
+    width: 85%;
+    font-size: 18px;
+    border-bottom: 2px var(--primary) dashed;
+}
+
+.text-input:focus {
+    outline: none;
+    border-bottom: 2px solid var(--secondary);
+}
+
+.hours {
+    width: fit-content;
+    display: inline-block;
+}
+
+
+.minutes {
+    width: 40%;
+    display: inline-block;
+}
+
+footer {
+    padding-bottom: 15px;
+}
+
+.roboto {
+    font-family: "Roboto";
+}
+
+.gentium-plus {
+    font-family: "Gentium Plus";
+}
+
+.lato {
+    font-family: "Lato";
+}
+
+.raleway {
+    font-family: "Raleway";
+}

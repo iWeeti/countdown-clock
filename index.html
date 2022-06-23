@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Clock</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="app">
+        <div class="left-container">
+            <header>
+                <h2>Countdown Clock</h2>
+            </header>
+            <hr>
+    
+            <table class="ts">
+                <tr>
+                    <td>Time Display</td>
+                    <td>
+                        <button data-timedisplay="both" id="td-both" class="btn active">Both</button>
+                        <button data-timedisplay="absolute" id="td-absolute" class="btn">Absolute</button>
+                        <button data-timedisplay="relative" id="td-relative" class="btn">Relative</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Clock Display</td>
+                    <td>
+                        <button data-timedisplay="absolute" id="cd-absolute" class="btn active">Absolute</button>
+                        <button data-timedisplay="relative" id="cd-relative" class="btn">Relative</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Headline</td>
+                    <td>
+                        <input id="text-input" class="text-input" type="text" placeholder="Your Tour Name Here">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Font</td>
+                    <td>
+                        <select class="font-select" name="font" id="font-select">
+                            <optgroup label="Serif">
+                                <!-- <option disabled>Serif</option> -->
+                                <option value="Playfair">Playfair</option>
+                                <option value="Noto Serif">Noto Serif</option>
+                                <option value="Crimson Text">Crimson Text</option>
+                                <option value="Cinzel">Cinzel</option>
+                                <option value="Prata">Prata</option>
+                                <option value="Ultra">Ultra</option>
+                                <option value="DM Serif">DM Serif</option>
+                            </optgroup>
+
+                            <optgroup label="Sans Serif">
+                                <!-- <option disabled>Sans Serif</option> -->
+                                <option value="Noto Sans">Noto Sans</option>
+                                <option value="Anton">Anton</option>
+                                <option value="Secular One">Secular One</option>
+                                <option value="Archivo Black">Archivo Black</option>
+                                <option value="El Messiri">El Messiri</option>
+                                <option value="Rubik Mono One">Rubik Mono One</option>
+                                <option value="Julius Sans One">Julius Sans One</option>
+                            </optgroup>
+
+                            <optgroup label="Handwriting">
+                                <!-- <option disabled>Handwriting</option> -->
+                                <option value="Dancing Script">Dancing Script</option>
+                                <option value="Pacifico">Pacifico</option>
+                                <option value="Great Vibes">Great Vibes</option>
+                                <option value="Parisienne">Parisienne</option>
+                                <option value="Homemade Apple">Homemade Apple</option>
+                                <option value="Italianno">Italianno</option>
+                                <option value="Merienda One">Merienda One</option>
+                            </optgroup>
+                            
+                            <optgroup label="Other">
+                                <!-- <option disabled>Other</option> -->
+                                <option value="Roboto"><p class="roboto">Roboto</p></option>
+                                <option value="Lato"><p class="lato">Lato</p></option>
+                                <option value="Gentium Plus"><p class="gentium-plus">Gentium Plus</p></option>
+                                <option value="Raleway"><p class="raleway">Raleway</p></option>
+                            </optgroup>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Color</td>
+                    <td>
+                        <input style="width: 100%; max-width: 150px;" id="color-input" type="color" placeholder="Hexcode or CSS Colorcode">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Starting Time</td>
+                    <td>
+                        <input type="datetime-local" id="datetime-input" class="text-input hours" > 
+                    </td>
+                </tr>
+                <tr>
+                    <td>Language</td>
+                    <td>
+                        <select class="font-select" name="language" id="lang-input">
+
+                        </select>
+                        <!-- <input style="width: 35px; text-align: center; text-transform: uppercase;" type="text" name="lang-input" id="lang-input" class="text-input"> -->
+                    </td>
+                </tr>
+            </table>
+    
+            <br>
+            <footer>
+                <!-- <h3 id="preview" contenteditable="true">Preview, Edit me: 123</h3> -->
+                <a href="#" id="link" class="btn">Preview</a>
+                <button id="copy-url" class="btn">Copy URL</button>
+                <br>
+                <p style="font-size: 11px;">Recommended canvas size is 500x600 pixels.<br>If you preview in browser, it is recommended that you zoom out.
+                <!-- </p>
+                <p style="margin: 1rem auto; max-width: 500px;"> -->
+                    This site does not collect any data. All the rendering etc. is done on the local device. This site only saves the previously inputted values on to the local device.</p>
+            </footer>
+        </div>
+        <div class="preview-iframe">
+            <iframe id="preview-iframe" src="https://countdown.weetisoft.xyz/canvas.html" frameborder="0" width="500"  height="600" scrolling="no"></iframe>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
